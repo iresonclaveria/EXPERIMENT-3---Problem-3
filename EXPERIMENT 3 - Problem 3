@@ -1,0 +1,41 @@
+#include <iostream>
+#include <conio.h>
+#include <cstring>
+
+using namespace std;
+int main()
+{
+	int a, b;
+	char letter[50], number;
+
+	cout << "Arrays and Array Sizes";
+	cout << "\n Enter your chosen letters and numbers: ";
+	cin >> letter;
+	
+	cout << "\n Reverse order: ";
+		
+	int size = strlen(letter);
+	for (a = 0; a < size; a++)
+	{
+		for (b = a + 1; b < size; b++)
+		{
+			if (letter[a] > letter[b])             
+			{
+				number = letter[a];                
+				letter[a] = letter[b];
+				letter[b] = number;
+			}
+		}
+	 }
+
+
+	for(a = 0; a < size; a++)
+	{
+		cout << letter[a];
+	}
+	
+	cout << "\n The length is: " << strlen(letter) + 1;
+	
+_getch();
+return 0;
+}
